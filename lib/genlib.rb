@@ -43,7 +43,6 @@ lambda {
   
   Kernel.send :define_method, :generator do |name, *args, &block|
       if block.nil?
-        puts "The args are #{args}"
         return context_object.wrap_enum(generators[name], *args)
       end
       generators[name] = block
