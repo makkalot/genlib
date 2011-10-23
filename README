@@ -1,8 +1,8 @@
 == genlib
 
 genlib is a very simple library (actually a dsl ) which aim is to make the process of making
-generators very easy. The idea was to have a simple interface like Python's
-yield generator interface.
+generators very easy. The idea was to have a simple interface like Python's yield generator 
+interface.
 
 You define a generator like :
 
@@ -15,11 +15,11 @@ generator :read_array do |obj|
 end
 
 
-An you then can use it like a regular iterator
+And you then can use it like a regular iterator
 
 for elem in generator(:read_array)
   puts "The element is : #{elem}"
 end
 
 
-For more example check the test directory.
+For more examples check the test directory.
