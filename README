@@ -1,3 +1,25 @@
 == genlib
 
-You should document your project here.
+genlib is a very simple library (actually a dsl ) which aim is to make the process of making
+generators very easy. The idea was to have a simple interface like Python's
+yield generator interface.
+
+You define a generator like :
+
+require 'genlib'
+
+generator :read_array do |obj|
+  (1..10).each do |e|
+    obj._yield e
+  end
+end
+
+
+An you then can use it like a regular iterator
+
+for elem in generator(:read_array)
+  puts "The element is : #{elem}"
+end
+
+
+For more example check the test directory.
